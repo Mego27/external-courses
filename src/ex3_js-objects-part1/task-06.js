@@ -8,8 +8,10 @@ function deepCopyObject(object) {
     }
     else if (object instanceof Object){
         newObject = {};
-        for (let key in object){ // eslint-disable-line guard-for-in
-            newObject[key] = deepCopyObject(object[key]);
+        for (let key in object){
+            if (object.hasOwnProperty(key)){
+                newObject[key] = deepCopyObject(object[key]);
+            }
         }
     }
     else{
