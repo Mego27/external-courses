@@ -6,4 +6,4 @@ function isVerifyIdentityArray(array){
     }
     return true;
 }
-module.exports = verifyIdentityArray
+module.exports = isVerifyIdentityArray
