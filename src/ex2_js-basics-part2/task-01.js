@@ -1,19 +1,8 @@
-function checkTypeVariable(variable){
+function checkType(variable){
     let result = '';
-    switch (typeof(variable)){
-        case 'string':
-            result = 'string';
-            break;
-        case 'number':
-            if (isNaN(variable)){
-                result = undefined;
-            }
-            else result = 'number';
-            break;
-        default:
-            result = undefined;
-            break;
+    if (typeof(variable) === 'string' || (typeof(variable) === 'number' && !Number.isNaN(variable))){
+        return typeof(variable);
     }
-    return result;
+    return;
 }
-module.exports = checkTypeVariable
+module.exports = checkType
