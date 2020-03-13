@@ -1,7 +1,7 @@
 function countOddEvenZeroArray(array){
-    let arrayCounters = new Array(3).fill(0);// четные / нечетные / нули
+    let arrayCounters = new Array(3).fill(0);
     for (let i = 0; i < array.length; i++){
-        if (typeof array[i] === 'number' && !isNaN(array[i])){
+        if (typeof array[i] === 'number' && !Number.isNaN(array[i])){
             if (array[i]%2===1){
                  arrayCounters[1]++;
             }

@@ -3,6 +3,6 @@ function checkType(variable){
     if (typeof(variable) === 'string' || (typeof(variable) === 'number' && !Number.isNaN(variable))){
         return typeof(variable);
     }
-    return;
+    return undefined;
 }
 module.exports = checkType
