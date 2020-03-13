@@ -1,17 +1,17 @@
-function isPrimaryNumber(numb){
-    if (numb<1000 && numb>=0 && typeof numb === 'number'){
-        if(numb===0){
+function isPrimaryNumber(number){
+    if (number<1000 && number>=0 && typeof number === 'number'){
+        if(number===0){
             return "Это нуль";
         }
-        if(numb===1){
+        if(number===1){
             return "Это единица";
         }
-        for(let i = 2; i <= Math.sqrt(numb); i++){
-            if(numb%i === 0){
-                return `Число ${numb} - составное число`;
+        for(let i = 2; i <= Math.sqrt(number); i++){
+            if(number%i === 0){
+                return `Число ${number} - составное число`;
             } 
         }
-        return `Число ${numb} - простое число`; 
+        return `Число ${number} - простое число`; 
     }
     return "Данные неверны";
 }
