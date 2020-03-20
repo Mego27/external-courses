@@ -5,6 +5,21 @@
 body {
     font-size: 1.5rem;
 }
+h2, h3 {
+    color: coral;
+}
+h1 {
+    text-align: center;
+}
+ol {
+    text-shadow: 1px 1px 2px black;
+}
+ul {
+    text-shadow: 5px 5px 15px rgb(255, 255, 255);
+}
+dl {
+    letter-spacing: 20px; font-weight: 800;
+}
 .lists {
     background-color: green;
     font-style: italic;
@@ -27,4 +42,7 @@ body {
 img {
     height: 400px;
     width: 40%;
+}
+pre {
+    background: cornflowerblue; font-size: 25px;
 }
