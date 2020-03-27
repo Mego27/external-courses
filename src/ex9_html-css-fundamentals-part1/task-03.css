@@ -20,7 +20,7 @@ button:hover {
 }
 button::after {
     content: "★";
-} 
+}
 button::before {
     content: "★";
 }
