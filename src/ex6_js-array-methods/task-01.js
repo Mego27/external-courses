@@ -1,14 +1,14 @@
-function arrayClipping(array, begin = 0, end = array.length){
+function arrayClipping(array, startPosition = 0, endPosition = array.length){
     let newArray = new Array();
-    let beginCopy = begin;
-    let endCopy = end;
-    if (begin < 0){
-        beginCopy = (array.length) + begin;
+    let begin = startPosition;
+    let end = endPosition;
+    if (startPosition < 0){
+        begin = (array.length) + startPosition;
     }
-    if (end < 0){
-        endCopy = array.length + end;
+    if (endPosition < 0){
+        end = array.length + endPosition;
     }
-    for(let i = beginCopy; i < endCopy; i++){
+    for(let i = begin; i < end; i++){
         newArray.push(array[i]);
     }
     return newArray;
