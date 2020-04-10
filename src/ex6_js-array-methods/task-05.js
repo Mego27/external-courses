@@ -6,4 +6,4 @@ function createArrayByCallback(array, callbackFunction){
     }
     return result;
 }
-module.exports = newArrayBasedOnCallbackFunction;
+module.exports = createArrayByCallback;

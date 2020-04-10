@@ -8,4 +8,4 @@ function filterArrayByCallback(array, callbackFunction){
     }
     return result;
 }
-module.exports = newFilteredArray;
+module.exports = filterArrayByCallback;
