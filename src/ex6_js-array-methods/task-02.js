@@ -1,6 +1,6 @@
 function hasSome(array, callbackFunction){
     for (let i = 0; i < array.length; i++){
-        if (callbackFunction(item, i, array)){
+        if (callbackFunction(array[i], i, array)){
             return true;
         }
     }
