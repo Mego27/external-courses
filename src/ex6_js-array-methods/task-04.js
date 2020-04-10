@@ -1,4 +1,4 @@
-function newFilteredArray(array, callbackFunction){
+function filterArrayByCallback(array, callbackFunction){
     let result = new Array();
     for (let i = 0; i < array.length; i++){
         let item = array[i];

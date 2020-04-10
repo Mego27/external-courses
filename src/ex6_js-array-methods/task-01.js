@@ -1,4 +1,4 @@
-function arrayClipping(array, startPosition = 0, endPosition = array.length){
+function slicePart(array, startPosition = 0, endPosition = array.length){
     let newArray = new Array();
     let begin = startPosition;
     let end = endPosition;
