@@ -13,4 +13,4 @@ function slicePart(array, startPosition = 0, endPosition = array.length){
     }
     return newArray;
 }
-module.exports = arrayClipping;
+module.exports = slicePart;
