@@ -1,9 +1,9 @@
 function newArrayBasedOnCallbackFunction(array, callbackFunction){
-    let newArray = new Array();
+    let result = new Array();
     for (let i = 0; i < array.length; i++){
         let item = array[i];
-        newArray.push(callbackFunction(item, i, array));
+        result.push(callbackFunction(item, i, array));
     }
-    return newArray;
+    return result;
 }
 module.exports = newArrayBasedOnCallbackFunction;
