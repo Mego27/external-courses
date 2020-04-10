@@ -16,12 +16,12 @@ body {
   }
   article {
     background: white;
-    margin: 0 0 1rem 0;
+    margin: 0;
   }
   aside {
     background: pink;
     flex: 1 2;
   }
   header, article, section, .module {
-    padding: 1rem;
+    padding: 15px;
   }

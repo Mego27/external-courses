@@ -2,10 +2,10 @@
     display: flex;
     margin: 5%;
 }
-.task-div {
+.task {
     height: 200px;
     width: 30%;
-    margin: 5%;
+    margin: 40px;
 }
 #first {
     background: rgb(4, 168, 209);
