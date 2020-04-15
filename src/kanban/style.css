@@ -8,6 +8,28 @@ body {
     font-size: 1em;
     color: white;
 }
+.user-menu {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    border: 1px solid;
+    list-style-type: none;
+    background-color: rgb(255, 160, 36);
+    right: 5px;
+    top: 45px;
+    z-index: 1;
+}
+.user-menu li {
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+.user-menu li:hover {
+    transform: scale(1.2, 1.2);
+}
 header {
     height: 55px;
     width: 100%;
@@ -26,6 +48,7 @@ h1 {
 }
 .btn-and-user-info {
     margin-left: auto;
+    margin-right: 5px;
     display: flex;
     align-items: center;
 }
@@ -33,6 +56,7 @@ h1 {
     margin-right: 50px;
 }
 .button button{
+    cursor: pointer;
     font-family: "Whitney";
     font-size: 1rem;
     font-weight: bold;
@@ -89,6 +113,11 @@ h1 {
 .ellipse-icon-user {
     border-radius: 50%;
     background-color: white;
+    cursor: pointer;
+}
+#arrow {
+    transition: all .5s ease;
+    cursor: pointer;
 }
 main {
     background-color: rgb(255, 186, 108);
