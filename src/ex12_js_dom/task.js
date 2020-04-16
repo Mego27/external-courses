@@ -42,10 +42,10 @@ function updateImages() {
 
 }
 function checkKeys(event) {
-    if (event.keyCode == "39") {
+    if (event.keyCode === 39) {
         nextImg();
     }
-    else if (event.keyCode == "37") {
+    else if (event.keyCode === 37) {
         previousImg();
     }
 }
