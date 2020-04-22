@@ -82,7 +82,7 @@ function saveNewTask() {
     }
     updateLocalStorage();
     checkAvailabilityButtons();
-    if(document.querySelector("#select-task")){
+    if(document.querySelector("#select-task")) {
         document.querySelector("#select-task").options.length = 0;
         fillDropdown(1, document.querySelector("#select-task"));
     }
