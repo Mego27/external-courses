@@ -1,7 +1,6 @@
 let userMenu = document.getElementById("user-menu");
 
 function showUserMenu() {
-    console.log(userMenu.childElementCount);
     if (userMenu.childElementCount < 3) {
         let ul = document.createElement("ul");
         ul.classList.add("user-menu");
