@@ -1,0 +1,26 @@
+div {
+    margin: 20% 40%;
+}
+button {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 12px;
+    border-color: rgb(190, 190, 190);
+    box-shadow: 0 2px 3px 0 rgb(241, 241, 241),
+                0 0 0 4px rgb(197, 197, 197),
+                0 0 0 6px rgb(247, 247, 247),
+                0 0 0 8px rgb(82, 82, 82);
+    background: linear-gradient(rgb(214, 214, 214) 20%,rgb(170, 170, 170) 80%);
+}
+button:hover {
+    background: linear-gradient(to top,rgb(214, 214, 214) 20%,rgb(170, 170, 170) 80%);
+}
+button::after {
+    content: "★";
+}
+button::before {
+    content: "★";
+}
