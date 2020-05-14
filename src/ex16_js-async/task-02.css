@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+input {
+    font-size: 1rem;
+}
+table {
+    margin-top: 20px;
+    border: 1px solid black;
+}
+td, th, tr {
+    padding: 5px;
+    border: 1px solid black;
+}
