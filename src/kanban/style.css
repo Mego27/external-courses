@@ -179,7 +179,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: 0;
     width: fit-content;
     margin-top: 7px;
@@ -214,9 +214,6 @@ main {
 .column-tasks svg {
     margin-right: 5px;
 }
-
-
-
 footer {
     background-color: rgb(255, 151, 31);
     position: absolute;

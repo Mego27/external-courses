@@ -1,4 +1,4 @@
-const dataMock = [
+let data = [
     {
         title: 'Backlog',
         issues: [],
@@ -16,7 +16,6 @@ const dataMock = [
         issues: [],
     },
 ]
-let data = dataMock;
 window.onload = () => {
     loadLocalStorageData();
     checkAvailabilityButtons();
@@ -106,11 +105,15 @@ function createDropdown(indexColumn) {
     else {
         let countIterations = 0;
         let animationFocus = setInterval(() => {
-        document.querySelector("#select-task").style.backgroundColor = "rgb(255, 186, 108)";
-        document.querySelector("#select-task").style.transition = ".2s ease";
-        setTimeout( () => {document.querySelector("#select-task").style.backgroundColor = "rgb(255, 255, 255)"}, 200);
-        countIterations++;
-        if(countIterations === 3) {clearInterval(animationFocus);}
+            document.querySelector("#select-task").style.backgroundColor = "rgb(255, 186, 108)";
+            document.querySelector("#select-task").style.transition = ".2s ease";
+            setTimeout( () => {
+                document.querySelector("#select-task").style.backgroundColor = "rgb(255, 255, 255)"
+            }, 200);
+            countIterations++;
+            if(countIterations === 3) {
+                clearInterval(animationFocus);
+            }
         }, 400);
     }
 }
