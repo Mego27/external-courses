@@ -40,7 +40,7 @@ const music = [
         artist: "Foster the People"
     },
 ];
-headersTable = ["Название", "Исполнитель"];
+let headersTable = ["Название", "Исполнитель"];
 function debounce(currentFunction, delay) {
     let debounceValue;
     return function () {
