@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    margin-top: 200px;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.animations {
+    width: 300px;
+    height: 300px;
+    border:  1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.loader {
+    border: 1px solid rgb(0, 0, 0);
+    background-image: radial-gradient(circle farthest-corner at 20px 15px, rgb(255, 101, 101), red);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: loader 2.5s linear infinite;
+}
+@keyframes loader {
+    0%
+    {
+        transform: scaleY(1) translateY(0px);
+    }
+    35%
+    {
+        transform: scaleY(1.2) translateY(160px);
+    }
+    45%
+    {
+        transform: scaleY(.7) translateY(308px);
+    }
+    55%
+    {
+        transform: scaleY(1.2) translateY(160px);
+    }
+    97%
+    {
+        transform:  scaleY(1) translateY(3px);
+    }
+    100%
+    {
+        transform:  scaleY(1) translateY(0px);
+    }
+}
+.second-task {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.block {
+    height: 300px;
+    padding: 0px 4px 0px 4px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.jumping-ball {
+    align-self: center;
+    border: 1px solid rgb(0, 0, 0);
+    background-image: linear-gradient(rgb(68, 66, 66), rgb(155, 155, 161));
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: jump 5s linear infinite;
+}
+@keyframes jump {
+    0%
+    {
+        transform: translateX(-100px);
+    }
+    5%
+    {
+        transform: translateX(-85px);
+    }
+    45%
+    {
+        transform: translateX(85px);
+    }
+    50%
+    {
+        transform: translateX(100px);
+    }
+    55%
+    {
+        transform: translateX(85px);
+    }
+    95%
+    {
+        transform: translateX(-85px);
+    }
+    100%
+    {
+        transform: translateX(-100px);
+    }
+}
+.third-task {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    animation: animate-third-task 10s linear infinite;
+}
+@keyframes animate-third-task {
+    0%
+    {
+        border-radius: 50%; 
+        background-image: linear-gradient(105deg, rgb(248, 207, 188), rgb(176, 230, 247));
+    }
+    16%
+    {
+        border-radius: 0%; 
+        transform: scale(1);
+    }
+    33%
+    {
+        border-radius: 0%; 
+        transform: scale(1);
+        background-image: linear-gradient(rgb(226, 156, 191), rgb(176, 233, 176));
+    }
+    50%
+    {
+        border-radius: 0%;
+        transform: scale(1.5) skew(15deg, 0deg);
+        background-image: linear-gradient(rgb(226, 156, 191), rgb(176, 233, 176));
+    }
+    66%
+    { 
+        border-radius: 0%;
+        transform: rotate(180deg) scale(1.5);
+    }
+    83%
+    {
+        border-radius: 0%;
+        transform: scale(1.5) rotate(180deg);
+        background-image: linear-gradient( rgb(213, 250, 164), rgb(116, 107, 255));
+    }
+    100%
+    {
+        background-image: linear-gradient(rgb(232, 240, 122), rgb(182, 140, 201));
+        transform: scale(1); 
+        border-radius: 50%; 
+    }
+}
