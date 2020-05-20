@@ -1,3 +1,7 @@
+import getLastIdIssue from './utility/getLastIdIssue.js';
+import checkAvailabilityButtons from './utility/checkAvailabilityButtons.js';
+import fillDropdown from './utility/fillDropdown.js';
+
 let data = [
     {
         title: 'Backlog',
@@ -18,28 +22,13 @@ let data = [
 ]
 window.onload = () => {
     loadLocalStorageData();
-    checkAvailabilityButtons();
-}
-
-function getLastIdIssue() {
-    let max = -Infinity;
-    for(let columnTasks of data) {
-        for(let issue of columnTasks.issues) {
-            if(+(issue.id.slice(4)) > max) {
-                max = issue.id.slice(4);
-            }
-        }
-    }
-    if(max === -Infinity) {
-        max = -1;
-    }
-    return max;
+    checkAvailabilityButtons(data);
 }
 function addNewTask(indexColumn, taskName, taskId) {
     let newIssue;
     if(arguments.length === 2) {
         newIssue = {
-            id: "task" + (+getLastIdIssue() + 1),
+            id: "task" + (+getLastIdIssue(data) + 1),
             name: taskName
         };
     }
@@ -80,10 +69,10 @@ function saveNewTask() {
         createTaskBlock(taskId, "My task ", 0);
     }
     updateLocalStorage();
-    checkAvailabilityButtons();
+    checkAvailabilityButtons(data);
     if(document.querySelector("#select-task")) {
         document.querySelector("#select-task").options.length = 0;
-        fillDropdown(1, document.querySelector("#select-task"));
+        fillDropdown(1, document.querySelector("#select-task"), data);
     }
     document.getElementsByClassName("task edit-task")[0].parentNode.removeChild(document.getElementsByClassName("task edit-task")[0]);
 }
@@ -98,7 +87,7 @@ function createDropdown(indexColumn) {
         select.classList.add("task", "edit-task");
         select.setAttribute("id", "select-task");
         select.style.cursor = "pointer";
-        fillDropdown(indexColumn, select);
+        fillDropdown(indexColumn, select, data);
         document.querySelector("#select-task").addEventListener("change", saveChangedTask.bind(null, indexColumn));
         document.querySelectorAll(".tasks")[indexColumn].scrollTop = document.querySelectorAll(".tasks")[indexColumn].scrollHeight;
     }
@@ -117,19 +106,6 @@ function createDropdown(indexColumn) {
         }, 400);
     }
 }
-function fillDropdown(indexColumn, selectNode) {
-    let option = new Option("<Select task>", -1);
-    option.disabled = true;
-    option.selected = true;
-    selectNode.append(option);
-    for(let i = 0; i < data[indexColumn-1].issues.length; i++) {
-        option = new Option(data[indexColumn-1].issues[i].name, data[indexColumn-1].issues[i].id);
-        selectNode.append(option);
-    }
-    option = new Option("<Cancel>", -1);
-    option.style.fontStyle = "italic";
-    selectNode.append(option);
-}
 function saveChangedTask(indexColumn) {
     let selectedIndex = document.querySelector("#select-task").selectedIndex;
     if(document.querySelector("#select-task").options[selectedIndex].value !== "-1") {
@@ -142,19 +118,9 @@ function saveChangedTask(indexColumn) {
             }
         }
         updateLocalStorage();
-        checkAvailabilityButtons();
+        checkAvailabilityButtons(data);
     }
     document.querySelector("#select-task").parentNode.removeChild(document.querySelector("#select-task"));
-}
-function checkAvailabilityButtons() {
-    for(let i = 1; i < data.length; i++) {
-        if(data[i-1].issues.length > 0) {
-            document.querySelectorAll(".change-task")[i].disabled = false;
-        }
-        else {
-            document.querySelectorAll(".change-task")[i].disabled = true;
-        }
-    }
 }
 function updateLocalStorage() {
     localStorage.clear();
