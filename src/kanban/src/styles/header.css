@@ -1,17 +1,29 @@
-@font-face {
-    src: url(/fonts/Whitney\ Light\ Regular.ttf);
-    font-family: "Whitney";
+.user-menu {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    border: 1px solid;
+    list-style-type: none;
+    background-color: rgb(255, 160, 36);
+    right: 5px;
+    top: 45px;
+    z-index: 1;
 }
-body {
-    font-family: "Whitney";
-    margin: 0;
-    font-size: 1em;
-    color: white;
+.user-menu li {
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+.user-menu li:hover {
+    transform: scale(1.2, 1.2);
 }
 header {
     height: 55px;
     width: 100%;
-    background-color: rgb(245, 142, 24);
+    background-color: rgb(255, 151, 31);
     display: flex;
     align-items: center;
 }
@@ -26,6 +38,7 @@ h1 {
 }
 .btn-and-user-info {
     margin-left: auto;
+    margin-right: 5px;
     display: flex;
     align-items: center;
 }
@@ -33,6 +46,7 @@ h1 {
     margin-right: 50px;
 }
 .button button{
+    cursor: pointer;
     font-family: "Whitney";
     font-size: 1rem;
     font-weight: bold;
@@ -89,17 +103,9 @@ h1 {
 .ellipse-icon-user {
     border-radius: 50%;
     background-color: white;
+    cursor: pointer;
 }
-main {
-    background-color: rgb(255, 173, 79);
-    height: 100%;
-    width: 100%;
-}
-footer {
-    background-color: rgb(245, 142, 24);
-    position: absolute;
-    width: 100%;
-    height: 55px;
-    left: 0;
-    bottom: 0;
+#arrow {
+    transition: all .5s ease;
+    cursor: pointer;
 }
